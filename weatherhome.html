@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           margin: 0;
+           padding-top: 15px;
+           background-image: url("weatherba.jpg");
+           height:1500px;
+           width:1500px;
+           position: fixed;
+           background-size: cover;
+       }
+       ul{
+           list-style-type: none;
+           margin: 0;
+           padding:0;
+           background-color:gray;
+           position: fixed;
+           top: 0;
+           width: 100%;
+           overflow: auto;
+       }
+       li{
+           float:left;
+       }
+       li:last-child{
+           border-right: none;
+       }
+       li a{
+           display: block;
+           color:black;
+           padding: 8px 16px;
+           text-decoration: none; 
+       }
+       li a.active{
+           background-color: red;
+           color: black;
+       }
+       li a:hover:not(.active){
+           background-color:beige;
+           color:darkblue;
+       }
+       footer{
+           padding: 3px;
+           color:black;
+           padding-top: 150px;
+       }
+       h2{
+           text-align: center;
+       }
+       div{
+           color:black;
+       }
+       .foot{
+           padding-bottom:0px;
+           padding-top: 50px;
+       }
+    </style>
+</head>
+<body style="background-image:url(' {% static 'weatherba.jpg' %}');">
+    <ul>
+        <li><a class="active" href="#home">HOME</a></li>
+        <li><a href="home.html">CHECK WEATHER</a></li>
+        <li><a href="signin.html">SIGN IN</a></li>
+        <li style="float:right"><a href="aboutweather.html">ABOUT</a></li>
+    </ul>
+    <h1>OpenWeather</h1>
+    <h3>Weather forecasts, nowcasts and history in a fast and elegant way</h3>
+    <p>For each point on the globe, we provide historical, current and forecasted weather data via light-speed APIs.</p>
+    <p>Our technology Time Machine, has allowed us to enhance data in the Historical Weather Collection: historical weather data is now available for any coordinates and the depth of historical data has been extended to 40 years.</p>
+    <p>Access current weather data for any location on Earth including over 200,000 cities! The data is frequently updated based on the global and local weather models, satellites, radars and a vast network of weather stations.</p>
+    <div>
+        <h4>Solar Panel Energy Prediction</h4>
+        <p>This product provides users with current, forecast and historical solar panel power output data based on the panel’s technical characteristics for any coordinates on the globe. In addition each response includes essential solar irradiation data (DNI, GHI and DHI).</p>
+    </div>
+    <div>
+        <h4>Solar Irradiance API</h4>
+        <p>This product provides users with current, forecast and historical solar irradiation data for any coordinates on the globe. It includes DNI, DHI and GHI indices for the Clear Sky and Cloudy Sky models.</p>
+    </div>
+    <div class="foot">
+        <footer>
+            <h4>Ouestions?Call:000-800-919-1613</h4>
+            <a href="https://accounts.google.com/InteractiveLogin/signinchooser">
+            <img src="{% static 'gmaillogo.jpg' %}" alt="https://www.google.com/" style="width:40px;height:40px;">
+            </a>
+            <a href="https://www.instagram.com/accounts/login/">
+            <img src="{% static 'instagramlogo.jpg' %}" alt="https://www.google.com/" style="width:40px;height:40px;">
+            </a>
+            <a href="https://twitter.com/i/flow/login">
+            <img src="{% static 'twitterlogo.jpg' %}" alt="https://www.google.com/" style="width:40px;height:40px;">
+            </a>
+            <a href=https://www.facebook.com/> 
+            <img src="{% static 'facebooklogo.jpg' %}" alt="https://www.google.com/" style="width:40px;height:40px;">
+            </a>
+        </footer>
+    </div> 
+</body>
+</html>

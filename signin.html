@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           margin:0;
+           background-image: url("weatherb.jpg");
+           position: fixed;
+           background-repeat: no-repeat;
+           background-size: cover;
+           
+       }
+       form{
+        padding-left: 500px;
+        margin: 50px;
+        font-size: large;
+       }
+       ul{
+           list-style-type: none;
+           margin:0;
+           padding:0;
+           background-color:gray;
+           position: fixed;
+           top: 0;
+           width: 100%;
+           overflow: auto;
+       }
+       li{
+           float:left;
+       }
+       li:last-child{
+           border-right: none;
+       }
+       li a{
+           display: block;
+           color:black;
+           padding: 8px 16px;
+           text-decoration: none; 
+       }
+       li a.active{
+           background-color:blue;
+           color: black;
+       }
+       li a:hover:not(.active){
+           background-color:white;
+           color: black;
+       }
+       footer{
+           padding: 3px;
+           color:black;
+           padding-top: 350px;
+       }
+       h2{
+           text-align: center;
+       }
+       div{
+           color:black;
+       }
+       .foot{
+           padding-bottom:0px;
+           padding-top: 50px;
+       }
+    </style>
+</head>
+<body style="background-image:url('{% static 'weatherba.jpg' %}');">
+    <ul>
+        <li><a href="weatherhome.html">HOME</a></li>
+        <li><a href="home.html">CHECK WEATHER</a></li>
+        <li><a class="active" href="signin.html">SIGN IN</a></li>
+        <li style="float:right"><a href="aboutweather.html">ABOUT</a></li>
+    </ul>
+    <form action="home.html"> 
+        <div class="user">
+           <label for="user"><b>USERNAME :</b></label>
+           <input type="text" id="user" name="user" placeholder="Enter Username" required><br><br>
+           <label for="pass"><b>PASSWORD :</b></label>
+           <input type="password" id="pass" name="pass"placeholder="Enter Password" required><br><br><br>
+           <input type="submit" value="SIGN IN">
+           <a href="forgotpass.html" title="Forgot Password">Forgot Password</a>
+        </div>
+    </form>
+    <div class="foot">
+        <footer>
+            <h4>Ouestions?Call:000-800-919-1613</h4>
+            <a href="https://accounts.google.com/InteractiveLogin/signinchooser">
+            <img src="{% static 'gmaillogo.jpg' %}" alt="https://www.google.com/" style="width:40px;height:40px;">
+            </a>
+            <a href="https://www.instagram.com/accounts/login/">
+            <img src="{% static 'instagramlogo.jpg' %}" alt="https://www.google.com/" style="width:40px;height:40px;">
+            </a>
+            <a href="https://twitter.com/i/flow/login">
+            <img src="{% static 'twitterlogo.jpg' %}" alt="https://www.google.com/" style="width:40px;height:40px;">
+            </a>
+            <a href=https://www.facebook.com/> 
+            <img src="{% static 'facebooklogo.jpg' %}" alt="https://www.google.com/" style="width:40px;height:40px;">
+            </a>
+        </footer>
+    </div> 
+</body>
+</html>

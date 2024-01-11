@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.1" />
+  
+    <title>Hi</title>
+    <meta name="description" content="description"/>
+    <meta name="author" content="author" />
+    <meta name="keywords" content="keywords" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+           margin: 0;
+           padding-top: 50px;
+           background-image: url("weatherba.jpg");
+           height:1500px;
+           width:1500px;
+           position: fixed;
+           background-size: cover;
+       }
+       ul{
+           list-style-type: none;
+           margin: 0;
+           padding:0;
+           background-color:gray;
+           position: fixed;
+           top: 0;
+           width: 100%;
+           overflow: auto;
+       }
+       li{
+           float:left;
+       }
+       li:last-child{
+           border-right: none;
+       }
+       li a{
+           display: block;
+           color:black;
+           padding: 8px 16px;
+           text-decoration: none; 
+       }
+       li a.active{
+           background-color:blue;
+           color: black;
+       }
+       li a:hover:not(.active){
+           background-color:blanchedalmond;
+           color: white;
+       }
+    </style> 
+</head>
+<body style="background-image:url('{% static 'weatherb.jpg' %}');">
+    <ul>
+        <li><a href="weatherhome.html">HOME</a></li>
+        <li><a class="active" href="home.html">CHECK WEATHER</a></li>
+        <li><a href="signin.html">SIGN IN</a></li>
+        <li style="float:right"><a href="aboutweather.html">ABOUT</a></li>
+    </ul>
+    
+  <div class="container">
+    <form method="POST"> {% csrf_token %}
+      <input type="text" name="city" placeholder="Enter City">
+      <button type="submit" class="btn">Enter</button>
+    </form>
+    <div class="weather">
+      <div class="left">
+        <h2>{{temp}} &deg;</h2>
+        <h3>{{city}}</h3>
+
+        
+
+        
+      </div>
+      <div class="right">
+        <div class="icon">
+          <p><img src='http://openweathermap.org/img/w/{{icon}}.png'width="100px">
+            </p>
+        </div>
+        <div class="condition">
+          <p>{{description}}</p>
+          
+          <p>{{day}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+ 
+    
+    
+</body>
+</html>
+    <footer>
+    <div class="footerContainer">
+      <div class="socialIcons">
+        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook "></i></a>
+        <a href="https://www.instagram.com/accounts/login/"><i class="fa-brands fa-instagram "></i></a>
+        <a href="https://twitter.com/OpenWeatherMap"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.google.com/"><i class="fa-brands fa-google-plus"></i></a>
+        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+
+      </div>
+
+
+        </ul>
+        <div class="footerBottom">
+          <p> Copyright &copy;2023 Designed by <span class="designer">ARYA</span></p>
+
+        </div>
+      </div>
+
+    </div>
+  </footer>
+    
+
+    
+  </body>
+</html>

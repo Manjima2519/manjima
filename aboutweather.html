@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           margin: 0;
+           padding-top: 15px;
+           background-image: url("weatherba.jpg");
+           height:1500px;
+           width:1500px;
+           position: fixed;
+           background-size: cover;
+       }
+       ul{
+           list-style-type: none;
+           margin: 0;
+           padding:0;
+           background-color:gray;
+           position: fixed;
+           top: 0;
+           width: 100%;
+           overflow: auto;
+       }
+       li{
+           float:left;
+       }
+       li:last-child{
+           border-right: none;
+       }
+       li a{
+           display: block;
+           color:black;
+           padding: 8px 16px;
+           text-decoration: none; 
+       }
+       li a.active{
+           background-color:blue;
+           color: black;
+       }
+       li a:hover:not(.active){
+           background-color:blanchedalmond;
+           color: white;
+       }
+       footer{
+           padding: 3px;
+           color:black;
+           padding-top: 220px;
+       }
+       h2{
+           text-align: center;
+       }
+       div{
+           color:black;
+       }
+       .foot{
+           padding-bottom:0px;
+           padding-top: 50px;
+       }
+    </style>
+ </style>
+</head>
+<body style="background-image:url('{% static 'weatherba.jpg' %}');">
+    <ul>
+        <li><a href="weatherhome.html">HOME</a></li>
+        <li><a href="home.html">CHECK WEATHER</a></li>
+        <li><a href="signin.html">SIGN IN</a></li>
+        <li style="float:right"><a class="active" href="aboutweather.html">ABOUT</a></li>
+    </ul>
+    <h1>OPEN WEATHER MAP</h1>
+    <p>OpenWeatherMap is an online service, owned by OpenWeather Ltd, that provides global weather data via API, including current weather data, forecasts, nowcasts and historical weather data. The company provides a minute-by-minute hyperlocal precipitation forecast.</p>
+    <p>Developers across the world benefit from the Open Source software ecosystem and OpenWeather is not an exception. While influenced by the platforms like Wikipedia and OpenStreetMap, we have used the Open Source software in the foundation of our platform.</p>
+    <p>What is the purpose of the weather API?</p>
+        <p>Weather APIs usually provide current weather conditions, including temperature, humidity, wind speed, and precipitation levels, as well as forecast information such as hourly or daily forecasts. Some APIs may also provide historical weather data or data on air quality and other environmental conditions.</p>
+    <p>What is the data source of OpenWeatherMap?</p>
+        <p>We collect and process weather data from different sources such as global and local weather models, satellites, radars and a vast network of weather stations. Data is available in JSON, XML, or HTML format.</p>
+    <div class="foot">
+        <footer>
+            <h4>Ouestions?Call:000-800-919-1613</h4>
+            <a href="https://accounts.google.com/InteractiveLogin/signinchooser">
+            <img src="{% static 'gmaillogo.jpg' %}" alt="https://www.google.com/" style="width:40px;height:40px;">
+            </a>
+            <a href="https://www.instagram.com/accounts/login/">
+            <img src="{% static 'instagramlogo.jpg' %}" alt="https://www.google.com/" style="width:40px;height:40px;">
+            </a>
+            <a href="https://twitter.com/i/flow/login">
+            <img src="{% static 'twitterlogo.jpg' %}" alt="https://www.google.com/" style="width:40px;height:40px;">
+            </a>
+            <a href=https://www.facebook.com/> 
+            <img src="{% static 'facebooklogo.jpg' %}" alt="https://www.google.com/" style="width:40px;height:40px;">
+            </a>
+        </footer>
+    </div>   
+</body>
+</html>
